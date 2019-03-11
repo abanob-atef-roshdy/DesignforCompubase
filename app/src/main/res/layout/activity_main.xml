@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="نسبة الحضور و الغياب بعذر او بدون"
+        android:textAlignment="center"
+        android:fontFamily="@font/new_font2"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_hodor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/parent"
+        android:background="#D3D3D3"
+        />
+
+    <TextView
+        android:id="@+id/tv_hodor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/new_font2"
+        app:layout_constraintLeft_toLeftOf="@+id/circular_green"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:text="الحضور"
+        app:layout_constraintRight_toRightOf="@+id/parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_header"
+        android:layout_marginEnd="16dp" />
+
+    <TextView
+        android:id="@+id/tv_gheabbe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="غياب بعذر"
+        android:fontFamily="@font/new_font2"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:foregroundGravity="center_horizontal"
+        app:layout_constraintRight_toRightOf="@+id/parent"
+        app:layout_constraintLeft_toLeftOf="@+id/parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_header" />
+
+    <TextView
+        android:id="@+id/tv_gheabBdon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/new_font2"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="غياب بدون عذر"
+        app:layout_constraintLeft_toLeftOf="@+id/parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_header" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_header"
+        app:layout_constraintRight_toRightOf="@+id/tv_header"
+        app:layout_constraintTop_toBottomOf="@+id/tv_header" />
+    <ProgressBar
+        android:id="@+id/circular_green"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:indeterminate="false"
+        android:layout_marginRight="16dp"
+        android:progress="65"
+        android:max="100"
+        android:secondaryProgress="100"
+        android:progressDrawable="@drawable/circular"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hodor"
+        app:layout_constraintRight_toRightOf="@+id/parent"
+        />
+    <ProgressBar
+        android:id="@+id/circular_orange"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:indeterminate="false"
+        android:foregroundGravity="center_horizontal"
+        android:progress="20"
+        android:max="100"
+        android:secondaryProgress="100"
+        android:progressDrawable="@drawable/circular2"
+        app:layout_constraintRight_toRightOf="@+id/tv_gheabbe"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_gheabbe"
+        app:layout_constraintTop_toBottomOf="@+id/tv_gheabbe"
+        app:layout_constraintHorizontal_bias="0.5"
+        />
+
+    <ProgressBar
+        android:id="@+id/circular_red"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:indeterminate="false"
+        android:progress="15"
+        android:max="100"
+        android:layout_marginLeft="16dp"
+        android:secondaryProgress="100"
+        android:progressDrawable="@drawable/circular3"
+        app:layout_constraintRight_toRightOf="@+id/tv_gheabBdon"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_gheabBdon"
+        app:layout_constraintTop_toBottomOf="@+id/tv_gheabBdon"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/tv_65"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="65%"
+        android:textSize="22sp"
+        android:textColor="#32CD32"
+        android:fontFamily="@font/new_font2"
+        app:layout_constraintTop_toBottomOf="@+id/circular_green"
+        app:layout_constraintBottom_toTopOf="@+id/circular_green"
+        app:layout_constraintRight_toRightOf="@+id/circular_green"
+        app:layout_constraintLeft_toLeftOf="@+id/circular_green"
+        />
+
+    <TextView
+        android:id="@+id/tv_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20%"
+        android:textSize="22sp"
+        android:textColor="#FF4500"
+        app:layout_constraintTop_toBottomOf="@+id/circular_orange"
+        app:layout_constraintBottom_toTopOf="@+id/circular_orange"
+        app:layout_constraintRight_toRightOf="@+id/circular_orange"
+        app:layout_constraintLeft_toLeftOf="@+id/circular_orange"
+        />
+
+    <TextView
+        android:id="@+id/tv_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15%"
+        android:textSize="22sp"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constraintTop_toBottomOf="@+id/circular_red"
+        app:layout_constraintBottom_toTopOf="@+id/circular_red"
+        app:layout_constraintRight_toRightOf="@+id/circular_red"
+        app:layout_constraintLeft_toLeftOf="@+id/circular_red"
+        />
+    <View
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/small"
+        app:layout_constraintLeft_toRightOf="@+id/tv_hodor"
+        android:id="@+id/green_circle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hodor"
+        app:layout_constraintBottom_toTopOf="@+id/tv_hodor"
+        />
+
+    <View
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/small2"
+        app:layout_constraintLeft_toRightOf="@+id/tv_gheabbe"
+        android:id="@+id/orange_circle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_gheabbe"
+        app:layout_constraintBottom_toTopOf="@+id/tv_gheabbe"
+        />
+
+    <View
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/small3"
+        app:layout_constraintLeft_toRightOf="@+id/tv_gheabBdon"
+        android:id="@+id/red_circle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_gheabBdon"
+        app:layout_constraintBottom_toTopOf="@+id/tv_gheabBdon"
+        />
+
+    <TextView
+        android:id="@+id/tv_ewm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintRight_toRightOf="@+id/tv_hodor"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_hodor"
+        app:layout_constraintTop_toBottomOf="@+id/circular_green"
+        android:fontFamily="@font/new_font2"
+        android:layout_marginTop="16dp"
+        android:textSize="22sp"
+        android:textColor="@android:color/black"
+        android:text="75 يوم" />
+
+    <TextView
+        android:id="@+id/tv_nesba"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:fontFamily="@font/new_font2"
+        app:layout_constraintRight_toRightOf="@+id/tv_ewm"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_ewm"
+        app:layout_constraintTop_toBottomOf="@id/tv_ewm"
+        android:text="النسبة المئوية %65" />
+    <TextView
+        android:id="@+id/tv_ewm2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintRight_toRightOf="@+id/tv_gheabbe"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_gheabbe"
+        app:layout_constraintTop_toBottomOf="@+id/circular_orange"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/new_font2"
+        android:textSize="22sp"
+        android:textColor="@android:color/black"
+        android:text="18 يوم" />
+
+    <TextView
+        android:id="@+id/tv_nesba2"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintRight_toRightOf="@+id/tv_ewm2"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_ewm2"
+        app:layout_constraintTop_toBottomOf="@id/tv_ewm2"
+        android:fontFamily="@font/new_font2"
+        android:text="النسبة المئوية %20" />
+    <TextView
+        android:id="@+id/tv_ewm3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintRight_toRightOf="@+id/tv_gheabBdon"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_gheabBdon"
+        app:layout_constraintTop_toBottomOf="@+id/circular_red"
+        android:layout_marginTop="16dp"
+        android:textSize="22sp"
+        android:fontFamily="@font/new_font2"
+        android:textColor="@android:color/black"
+        android:text="10 يوم" />
+
+    <TextView
+        android:id="@+id/tv_nesba3"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintRight_toRightOf="@+id/tv_ewm3"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_ewm3"
+        app:layout_constraintTop_toBottomOf="@id/tv_ewm3"
+        android:fontFamily="@font/new_font2"
+        android:text="النسبة المئوية %15" />
+    <ImageView
+        android:id="@+id/img_header2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintRight_toRightOf="@+id/parent"
+        app:layout_constraintLeft_toLeftOf="@+id/parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nesba2"
+        android:background="#D3D3D3"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        app:layout_constraintTop_toTopOf="@+id/img_header2"
+        android:id="@+id/view2"
+        app:layout_constraintRight_toRightOf="@+id/parent"
+        app:layout_constraintLeft_toLeftOf="@+id/parent"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/img_header2"
+        app:layout_constraintRight_toRightOf="@+id/parent"
+        app:layout_constraintLeft_toLeftOf="@+id/parent"
+        android:id="@+id/view3"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_header2"
+        android:text="عدد الايام و الحصص"
+        android:fontFamily="@font/new_font2"
+        android:textSize="18sp"
+        app:layout_constraintRight_toRightOf="@+id/parent"
+        app:layout_constraintLeft_toLeftOf="@+id/parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_header2"
+        app:layout_constraintBottom_toTopOf="@+id/img_header2"
+        />
+
+    <ImageView
+        android:id="@+id/img_table"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="10dp"
+         android:elevation="2dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="32dp"
+        android:background="#DCDCDC"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintLeft_toLeftOf="@+id/parent"
+        app:layout_constraintRight_toRightOf="@+id/parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_header2" />
+
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="الايام"
+        android:elevation="2dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="15sp"
+        android:layout_marginRight="8dp"
+        android:fontFamily="@font/new_font2"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintBottom_toTopOf="@+id/img_table"
+        app:layout_constraintRight_toRightOf="@+id/img_table"
+        app:layout_constraintTop_toBottomOf="@+id/img_table"
+        android:id="@+id/tv_ayam"
+         />
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="75 يوم"
+        app:layout_constraintTop_toTopOf="@+id/img_table"
+        app:layout_constraintRight_toRightOf="@+id/img_table"
+        app:layout_constraintLeft_toLeftOf="@+id/img_table"
+        android:id="@+id/tv_table1"
+        app:layout_constraintHorizontal_bias="0.6"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="15sp"
+        android:textColor="#32CD32"
+        android:elevation="2dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/new_font2"
+        />
+    <TextView
+        android:id="@+id/tv_secondLine1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintRight_toRightOf="@+id/tv_table1"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_table1"
+        app:layout_constraintTop_toBottomOf="@id/tv_table1"
+        app:layout_constraintBottom_toBottomOf="@+id/img_table"
+        android:elevation="2dp"
+        android:fontFamily="@font/new_font2"
+        app:layout_constraintHorizontal_bias="1"
+        android:layout_marginBottom="8dp"
+        android:text="الحضور" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:elevation="2dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/img_table"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_table2"
+        app:layout_constraintRight_toRightOf="@+id/tv_table1"
+        app:layout_constraintTop_toTopOf="@+id/img_table"
+        app:layout_constraintHorizontal_bias="0.65" />
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="18 يوم"
+        android:id="@+id/tv_table2"
+        android:textSize="15sp"
+        android:textColor="#FF8C00"
+        android:elevation="2dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintRight_toRightOf="@+id/tv_table1"
+        app:layout_constraintLeft_toLeftOf="@+id/img_table"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toTopOf="@+id/img_table"
+        android:fontFamily="@font/new_font2"
+        />
+    <TextView
+        android:id="@+id/tv_secondLine2"
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/new_font2"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintRight_toRightOf="@+id/tv_table2"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_table2"
+        app:layout_constraintTop_toBottomOf="@id/tv_table2"
+        app:layout_constraintBottom_toBottomOf="@+id/img_table"
+        android:layout_marginBottom="8dp"
+        android:elevation="2dp"
+        app:layout_constraintHorizontal_bias="1"
+        android:text="غياب بعذر" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_table"
+        app:layout_constraintHorizontal_bias="0.63"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_table3"
+        app:layout_constraintRight_toRightOf="@+id/tv_table2"
+        app:layout_constraintTop_toTopOf="@+id/img_table"
+        />
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@android:color/holo_red_light"
+        android:elevation="2dp"
+        android:id="@+id/tv_table3"
+        android:text="10 يوم"
+        app:layout_constraintRight_toRightOf="@+id/tv_table2"
+        app:layout_constraintLeft_toLeftOf="@+id/img_table"
+        app:layout_constraintTop_toTopOf="@+id/img_table"
+        android:layout_marginTop="8dp"
+        app:layout_constraintHorizontal_bias="0"
+        android:fontFamily="@font/new_font2"
+        />
+
+    <TextView
+        android:id="@+id/tv_secondLine3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="@+id/tv_table3"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_table3"
+        app:layout_constraintTop_toBottomOf="@id/tv_table3"
+        app:layout_constraintBottom_toBottomOf="@+id/img_table"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/new_font2"
+        android:elevation="2dp"
+        app:layout_constraintHorizontal_bias="1"
+        android:text="غياب بدون عذر" />
+
+
+    <ImageView
+        android:id="@+id/img_table2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="10dp"
+        android:elevation="2dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="32dp"
+        android:background="#DCDCDC"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintLeft_toLeftOf="@+id/parent"
+        app:layout_constraintRight_toRightOf="@+id/parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_table" />
+
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="الحصص"
+        android:elevation="2dp"
+        android:fontFamily="@font/new_font2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="15sp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintBottom_toTopOf="@+id/img_table2"
+        app:layout_constraintRight_toRightOf="@+id/img_table2"
+        app:layout_constraintTop_toBottomOf="@+id/img_table2"
+        android:id="@+id/tv_lessons"
+        />
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="250 يوم"
+        android:fontFamily="@font/new_font2"
+        app:layout_constraintTop_toTopOf="@+id/img_table2"
+        app:layout_constraintRight_toRightOf="@+id/img_table2"
+        app:layout_constraintLeft_toLeftOf="@+id/img_table2"
+        android:id="@+id/tv_second_img_green"
+        app:layout_constraintHorizontal_bias="0.6"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="15sp"
+        android:textColor="#32CD32"
+        android:elevation="2dp"
+        android:layout_marginTop="8dp"
+        />
+    <TextView
+        android:id="@+id/tv_secondLine_img1"
+        android:fontFamily="@font/new_font2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintRight_toRightOf="@+id/tv_second_img_green"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_second_img_green"
+        app:layout_constraintTop_toBottomOf="@id/tv_second_img_green"
+        app:layout_constraintBottom_toBottomOf="@+id/img_table2"
+        android:elevation="2dp"
+        app:layout_constraintHorizontal_bias="1"
+        android:layout_marginBottom="8dp"
+        android:text="الحضور" />
+
+    <View
+        android:id="@+id/dividerv1"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:elevation="2dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/img_table2"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_second_img_orange"
+        app:layout_constraintRight_toRightOf="@+id/tv_second_img_green"
+        app:layout_constraintTop_toTopOf="@+id/img_table2"
+        app:layout_constraintHorizontal_bias="0.65" />
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="63 حصة"
+        android:fontFamily="@font/new_font2"
+        android:id="@+id/tv_second_img_orange"
+        android:textSize="15sp"
+        android:textColor="#FF8C00"
+        android:elevation="2dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintRight_toRightOf="@+id/tv_second_img_green"
+        app:layout_constraintLeft_toLeftOf="@+id/img_table2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toTopOf="@+id/img_table2"
+        />
+    <TextView
+        android:id="@+id/tv_secondLine_img2"
+        android:fontFamily="@font/new_font2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintRight_toRightOf="@+id/tv_second_img_orange"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_second_img_orange"
+        app:layout_constraintTop_toBottomOf="@id/tv_second_img_orange"
+        app:layout_constraintBottom_toBottomOf="@+id/img_table2"
+        android:layout_marginBottom="8dp"
+        android:elevation="2dp"
+        app:layout_constraintHorizontal_bias="1"
+        android:text="غياب بعذر" />
+
+    <View
+        android:id="@+id/dividerv2"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_table2"
+        app:layout_constraintHorizontal_bias="0.63"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_table3"
+        app:layout_constraintRight_toRightOf="@+id/tv_second_img_orange"
+        app:layout_constraintTop_toTopOf="@+id/img_table2" />
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@android:color/holo_red_light"
+        android:elevation="2dp"
+        android:id="@+id/tv_second_img_red"
+        android:text="46 حصة"
+        app:layout_constraintRight_toRightOf="@+id/tv_second_img_orange"
+        app:layout_constraintLeft_toLeftOf="@+id/img_table2"
+        app:layout_constraintTop_toTopOf="@+id/img_table2"
+        android:layout_marginTop="8dp"
+        app:layout_constraintHorizontal_bias="0"
+        android:fontFamily="@font/new_font2"
+        />
+
+    <TextView
+        android:id="@+id/tv_secondLine_img3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="@+id/tv_second_img_red"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_second_img_red"
+        app:layout_constraintTop_toBottomOf="@id/tv_second_img_red"
+        app:layout_constraintBottom_toBottomOf="@+id/img_table2"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/new_font2"
+        android:elevation="2dp"
+        app:layout_constraintHorizontal_bias="1"
+        android:text="غياب بدون عذر" />
+
+
+
+</android.support.constraint.ConstraintLayout>
